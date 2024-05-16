@@ -1,0 +1,49 @@
+:root {
+  --time: 0.75s;
+}
+
+.float-in-animation {
+    animation: floatInAnimation var(--time) ease-out;
+}
+
+.animated.slide-left {
+    animation: slideInLeft var(--time) ease-out;
+}
+
+  
+.animated.slide-right {
+    animation: slideInRight var(--time) ease-out;
+}
+
+@keyframes floatInAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
